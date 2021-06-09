@@ -1,0 +1,221 @@
+/* global styling */
+html 
+{
+    scroll-behavior: smooth;
+}
+body
+{
+    font-family: 'segoe ui light';
+    background: #faf3f1 url(../images/1.png);
+}
+.color-mine
+{
+    color:#ff7d5f !important;
+}
+.rounded-mine
+{
+    border-top-right-radius: 30%;
+    border-bottom-right-radius: 30%;
+}
+.btn-mine
+{
+    background-color: #ff7d5f;
+}
+.bg-opacity
+{
+    background-color: rgba(0,0,0,0.5);
+}
+.section-title
+{
+    font-size: 50px;
+    font-weight: 900;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+/* end of global styling */
+
+
+/* header styling */
+header
+{
+    background-image: url(../images/mainBg.jpg);
+    background-size: cover;
+    background-position:center center;
+}
+nav h1
+{
+    font-family: 'Lobster', cursive;
+    font-size: 25px;
+}
+#typingEffect
+{
+    font-family: 'Lobster', cursive;
+    font-size: 50px;
+}
+/* end of header styling */
+
+
+/* recipes styling */
+.searchInput
+{
+    top: 85%;
+}
+.category
+{
+    background-image: url(../images/category-bg.png);
+    background-size: cover;
+    background-position: center center;
+}
+#recipesCategories
+{
+    background: #faf3f1 url(../images/1.png);
+}
+.recipe
+{
+    cursor: pointer;
+}
+.recipe img
+{
+    width: 100%;
+    height: 300px !important;
+    transition-duration: 750ms;
+    box-shadow: 10px 10px 10px rgb(177, 170, 170);
+    border-radius: 5px;   
+}
+.recipe img:hover
+{
+    transform:scale(1.1);
+}
+/* end of recipes styling */
+
+
+/* lightBoxContainer styling  */
+#lightBoxContainer
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    overflow-y:auto; 
+    z-index: 2;
+}
+#lightBoxContainer::-webkit-scrollbar 
+{
+    display: none;
+}
+#closeBtn
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
+    font-size: 30px;
+    padding:12px;
+    cursor:pointer;
+}
+.detailsImage
+{
+    width: 100%;
+    height: 300px !important;
+    padding: 1.2rem;
+}
+/* end of lightBoxContainer styling  */
+
+
+/* testimonials styling */
+.slide img 
+{
+    width: 100px;
+}
+.carousel-indicators li
+{
+    width: 1px;
+    height: 1px;
+    border-radius: 50%;
+    margin: 0px 5px;
+    background-color:#ff7d5f;
+} 
+.carousel-indicators li:hover
+{
+    background-color: #e7330a;
+}
+.testimonials p
+{
+    width: 50%;
+    margin: auto;
+    font-size: 18px;
+    color: #555e5e;
+    margin-bottom: 30px;
+    text-align: center;
+}
+.testimonials h4
+{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #dc3545;
+}
+.testimonials h6
+{
+    font-size: 14px;
+    font-weight: 600;
+    color: #888;
+    margin-bottom: 30px;
+}
+/* end of testimonials styling */
+
+
+/* contact us styling */
+ .contactUSForm input,.contactUSForm textarea
+{
+border: 2px solid #ff7d5f !important;
+background-color: rgba(205, 142, 90,0.1);
+font-weight: 900;
+}
+.contactUSForm label
+{
+    font-size: 20px;
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: rgb(96, 95, 94);
+}
+/* end of contact us styling */
+
+
+.br 
+{
+   background-color: #ff7d5f !important;
+   width: 100%;
+   height: 10px;
+}
+footer
+{
+    background-color:  #4F4D53;
+    color: #fff;
+    padding: 0;
+}
+li
+{
+    list-style-type: none;
+    padding: 8px;
+}
+footer h4
+{
+    font-weight: 700;
+}
+footer h6
+{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+footer a
+{
+    color: #fff;
+}
+footer a:hover
+{
+    color: #ff7d5f;
+}

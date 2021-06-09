@@ -1,0 +1,382 @@
+<html lang="en">
+
+<head>
+  <!-- meta&title -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="discription" content="Get Food Recipes and Recipe details using Api and display it on html">
+  <meta name="Author" content="Fady Yousry">
+  <title>Recipacito</title>
+  <link rel="icon" href="images/siteicon.png">
+  <!-- styling links -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+  <!-- script links -->
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+</head>
+
+<body>
+  <header id="home" class="vh-100 d-flex flex-wrap align-items-start justify-content-center position-relative">
+    <!-- nav bar start -->
+    <nav class="navbar navbar-expand-lg w-100  navbar-dark bg-opacity">
+      <a class="navbar-brand" href="#">
+        <h1>Recipacito</h1>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#search">Recipes Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#recipes">Recipes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#testimonials">Testimonials</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contactUs">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- nav bar end -->
+
+    <!-- header content "Never Miss a Recipe" with typing effect using js -->
+    <h1 id="typingEffect" class="w-100 text-white font-weight-bolder text-center"></h1>
+
+    <!-- Search input with drop down menu  -->
+    <div id="search" class="searchInput position-absolute w-75 m-auto p-5 shadow-lg rounded bg-white">
+      <div class="row no-gutters">
+        <div class="col-md-10">
+          <div class="form-group shadow-none d-flex justify-content-center">
+            <div class="w-100 ">
+              <select name="food" class="form-control" id="searchInput">
+                <option value="apple">Apple</option>
+                <option value="apricot">Apricot</option>
+                <option value="arepas">Arepas</option>
+                <option value="artichoke">Artichoke</option>
+                <option value="asparagus">Asparagus</option>
+                <option value="avocado">Avocado</option>
+                <option value="bacon">Bacon</option>
+                <option value="banana">Banana</option>
+                <option value="basil">Basil</option>
+                <option value="bbq">Bbq</option>
+                <option value="bean">Bean</option>
+                <option value="beef">Beef</option>
+                <option value="beetroot">Beetroot</option>
+                <option value="blackberry">Blackberry</option>
+                <option value="blackcurrant">Blackcurrant</option>
+                <option value="blueberry">Blueberry</option>
+                <option value="boysenberry">Boysenberry</option>
+                <option value="broccoli">Broccoli</option>
+                <option value="brussel">Brussel</option>
+                <option value="bunny">Bunny</option>
+                <option value="cabbage">Cabbage</option>
+                <option value="cake">Cake</option>
+                <option value="carrot">Carrot</option>
+                <option value="cauliflower">Cauliflower</option>
+                <option value="celery">Celery</option>
+                <option value="champ">Champ</option>
+                <option value="cherry">Cherry</option>
+                <option value="chicken">Chicken</option>
+                <option value="chickpea">Chickpea</option>
+                <option value="chili">Chili</option>
+                <option value="chips">Chips</option>
+                <option value="chocolate">Chocolate</option>
+                <option value="chow">Chow</option>
+                <option value="cinnamon">Cinnamon</option>
+                <option value="coconut">Coconut</option>
+                <option value="coriander">Coriander</option>
+                <option value="corn">Corn</option>
+                <option value="crab">Crab</option>
+                <option value="cream">Cream</option>
+                <option value="croissant">Croissant</option>
+                <option value="cucumber">Cucumber</option>
+                <option value="curry">Curry</option>
+                <option value="dill">Dill</option>
+                <option value="donuts">Donuts</option>
+                <option value="duck">Duck</option>
+                <option value="fajitas">Fajitas</option>
+                <option value="fig">Fig</option>
+                <option value="fish">Fish</option>
+                <option value="fries">Fries</option>
+                <option value="fruit">Fruit</option>
+                <option value="garlic">Garlic</option>
+                <option value="goat">Goat</option>
+                <option value="grape">Grape</option>
+                <option value="grapefruit">Grapefruit</option>
+                <option value="green">Green</option>
+                <option value="ham">Ham</option>
+                <option value="hamburger">Hamburger</option>
+                <option value="hummus">Hummus</option>
+                <option value="ice">Ice</option>
+                <option value="kebab">Kebab</option>
+                <option value="ketchup">Ketchup</option>
+                <option value="kiwifruit">Kiwifruit</option>
+                <option value="lamb">Lamb</option>
+                <option value="lasagna">Lasagna</option>
+                <option value="leek">Leek</option>
+                <option value="lemon">Lemon</option>
+                <option value="lentil">Lentil</option>
+                <option value="lettuce">Lettuce</option>
+                <option value="lime">Lime</option>
+                <option value="lobster">Lobster</option>
+                <option value="lychee">Lychee</option>
+                <option value="mandarin">Mandarin</option>
+                <option value="mango">Mango</option>
+                <option value="maple">Maple</option>
+                <option value="marzipan">Marzipan</option>
+                <option value="masala">Masala</option>
+                <option value="melon">Melon</option>
+                <option value="mushrooms">Mushrooms</option>
+                <option value="nectarine">Nectarine</option>
+                <option value="onion">Onion</option>
+                <option value="orange">Orange</option>
+                <option value="oregano">Oregano</option>
+                <option value="paella">Paella</option>
+                <option value="papaya">Papaya</option>
+                <option value="parma">Parma</option>
+                <option value="parsley">Parsley</option>
+                <option value="passion">Passion</option>
+                <option value="pasta">Pasta</option>
+                <option value="peach">Peach</option>
+                <option value="pear">Pear</option>
+                <option value="peas">Peas</option>
+                <option value="pepper">Pepper</option>
+                <option value="pepperoni">Pepperoni</option>
+                <option value="pie">Pie</option>
+                <option value="pierogi">Pierogi</option>
+                <option value="pineapple">Pineapple</option>
+                <option value="pizza">Pizza</option>
+                <option value="plum">Plum</option>
+                <option value="poke">Poke</option>
+                <option value="pomegranate">Pomegranate</option>
+                <option value="popcorn">Popcorn</option>
+                <option value="pork">Pork</option>
+                <option value="potato">Potato</option>
+                <option value="poutine">Poutine</option>
+                <option value="pudding">Pudding</option>
+                <option value="pumpkin">Pumpkin</option>
+                <option value="quince">Quince</option>
+                <option value="radish">Radish</option>
+                <option value="raspberry">Raspberry</option>
+                <option value="red">Red</option>
+                <option value="rendang">Rendang</option>
+                <option value="ribs">Ribs</option>
+                <option value="rosemary">Rosemary</option>
+                <option value="saffron">Saffron</option>
+                <option value="salad">Salad</option>
+                <option value="salami">Salami</option>
+                <option value="sausage">Sausage</option>
+                <option value="seafood">Seafood</option>
+                <option value="som">Som</option>
+                <option value="sprouts">Sprouts</option>
+                <option value="steak" selected>Steak</option>
+                <option value="strawberry">Strawberry</option>
+                <option value="sushi">Sushi</option>
+                <option value="sweet">Sweet</option>
+                <option value="syrup">Syrup</option>
+                <option value="tacos">Tacos</option>
+                <option value="tam">Tam</option>
+                <option value="toast">Toast</option>
+                <option value="tofu">Tofu</option>
+                <option value="tomato">Tomato</option>
+                <option value="turkey">Turkey</option>
+                <option value="watermelon">Watermelon</option>
+                <option value="zucchini">Zucchini</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <button id="searchBtn" class="btn rounded-mine btn-block text-white btn-mine">search</button>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- end of header section (Navbar,SearchInput,Typing word) -->
+
+  <!-- recipes section -->
+  <section id="recipesCategories" class="text-center mt-5 pt-5 ">
+    <div id="recipes" class="container-fluid py-5">
+      <h2 class="section-title color-mine">Recipes</h2>
+      <p class="lead">Find everyday cooking inspiration with us.<br> Discover Recipes & Cooks.
+      </p>
+
+      <div class="container-fluid text-left">
+        <div class="row" id="recipesRow">
+          <!-- display recipes here -->
+        </div>
+      </div>
+    </div>
+    <!-- end of recipes -->
+
+    <!-- recipe details -->
+    <div id="lightBoxContainer" class="d-none justify-content-center align-items-center ">
+      <i id="closeBtn" class="far fa-times-circle"></i>
+      <div id="lightBoxItem" class="w-75 pt-5">
+        <div id="recipeDetails">
+          <!--  recipe details will be displayed here by js -->
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end of recipes&recipe details section -->
+
+  <!-- Testimonials -->
+  <article id="testimonials" class="testimonials text-center pt-3 ">
+    <div class="testimonials-title">
+      <h2 class=" position-relative color-mine section-title">Testimonials</h2>
+    </div>
+    <div id="carouselExampleIndicators" class="carousel slide w-75 m-auto" data-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="slide">
+            <img class="rounded-circle py-4" src="images/t1.jpg" class="d-block w-100" alt="...">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis totam adipisci tempora. Perferendis
+              ratione, quod voluptatem, placeat eligendi repellat fugiat illum corrupti consequatur eveniet tenetur
+              eaque, sequi suscipit soluta delectus?</p>
+            <h4>Alexa Smith</h4>
+            <h6>Spcica Customer</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="slide">
+            <img class="rounded-circle py-4" src="Images/t2.jpg" class="d-block w-100" alt="...">
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Odit voluptates porro corporis natus!
+              Blanditiis doloribus, necessitatibus neque dolore quo sapiente optio rem aspernatur quas doloremque maxime
+              soluta rerum, enim fugit.</p>
+            <h4>Lisa Mark</h4>
+            <h6>Spcica Customer</h6>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="slide">
+            <img class="rounded-circle py-4" src="Images/t3.jpg" class="d-block w-100" alt="...">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae libero quibusdam laudantium labore
+              cum saepe ipsa quae? Rerum rem deleniti beatae, commodi provident adipisci officiis, similique libero
+              praesentium ex quis.</p>
+            <h4>Jana John</h4>
+            <h6>Spcica Customer</h6>
+          </div>
+        </div>
+      </div>
+      <ol class="carousel-indicators position-static">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+      </ol>
+    </div>
+  </article>
+  <!-- end of testimonials -->
+
+  <!-- contact US Form -->
+  <section id="contactUs" class="py-5">
+    <div class="container-fluid">
+      <h2 class="section-title color-mine pb-5">Contact Us</h2>
+      <form class="w-75 m-auto contactUSForm ">
+        <div class="form-group row">
+          <label for="Name" class="col-sm-3 col-form-label">Full Name</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row">
+          <label for="Email" class="col-sm-3 col-form-label">Email</label>
+          <div class="col-sm-9">
+            <input type="text" class="form-control">
+          </div>
+        </div>
+        <div class="form-group row pb-3">
+          <label for="Message" class="col-sm-3 col-form-label">Write Your Message</label>
+          <div class="col-sm-9">
+            <textarea name="comment" class="form-control" rows="10"></textarea>
+          </div>
+        </div>
+        <button type="button"
+          class="btn btn-mine btn-block w-25 ml-auto text-white font-weight-bolder py-2">Send</button>
+      </form>
+  </section>
+  <!-- end of contact us  -->
+
+  <!-- footer -->
+  <footer class="pb-1">
+    <div class="br"></div>
+    <div class="container py-5 text-center">
+      <div class="row">
+        <div class="col-md-3">
+          <div>
+            <ul>
+              <li>
+                <h4 class="color-mine">Team</h4>
+              </li>
+              <li>Danielle</li>
+              <li>Brian</li>
+              <li>Sara</li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <ul>
+              <li>
+                <h4 class="color-mine">Learn More</h4>
+              </li>
+              <li><a href="#">Subscribe</a></li>
+              <li><a href="#">Customer Service</a></li>
+              <li><a href="#">Content Licensing</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <ul>
+              <li>
+                <h4 class="color-mine">Meet Us</h4>
+              </li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Advertise</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div>
+            <ul>
+              <li>
+                <h4 class="color-mine">Contact</h4>
+              </li>
+              <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h6 class="text-center pb-1">Copyright &copy; 2021 All Rights Reserved | Recipacito | <a
+        href="https://www.linkedin.com/in/fady-yousry-8a4594207/" target="_blank">Fady Yousry</a> </h6>
+
+
+  </footer>
+  <!-- the end ... -->
+
+  <script src="js/script.js"></script> 
+</body>
+
+</html>
+
